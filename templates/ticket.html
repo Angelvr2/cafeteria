@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <title>Ticket</title>
+
+    </head>
+
+    <body>
+
+        <div class="contenedor">
+
+            <h1>Ticket de Venta</h1>
+
+            <p>Producto: {{ pedido.producto.nombre }}</p>
+
+            <p>Cantidad: {{ pedido.cantidad }}</p>
+
+            <p>Subtotal: {{ subtotal }}</p>
+
+            <p>IVA: {{ impuesto }}</p>
+
+            <p>Descuento: {{ descuento }}</p>
+
+            <p>Total: {{ total }}</p>
+
+        </div>
+
+    </body>
+
+</html>

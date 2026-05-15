@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <title>Cafeteria</title>
+
+    </head>
+
+    <body>
+
+        <div class="contenedor">
+
+            <h1>Sistema de Cafeteria</h1>
+
+            <h3>Menu</h3>
+
+            {% for producto in productos %}
+
+                <p>
+                    {{ producto.nombre }} -
+                    ${{ producto.precio }}
+                </p>
+
+            {% endfor %}
+
+
+            <form action="{{ url_for('generar_ticket') }}" method="post">
+
+                <label>Ingresa el producto:</label>
+                <input type="text" name="producto">
+
+                <label>Ingresa la cantidad:</label>
+                <input type="number" name="cantidad">
+
+                <button type="submit">
+                    Generar Ticket
+                </button>
+
+            </form>
+
+        </div>
+
+    </body>
+
+</html>
